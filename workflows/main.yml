@@ -2,7 +2,7 @@ name: Main
 
 on:
   push:
-    branches: ['6-lab**']
+    branches: ['laba6**']
   
   pull_request:
     branches: ['main']
@@ -32,8 +32,9 @@ jobs:
       - name: Checkstyle
         run: dotnet format --verify-no-changes
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        env:
-            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: Nurmagzanova/2ooaip
 
             

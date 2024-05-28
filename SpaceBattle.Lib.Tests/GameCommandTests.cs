@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib.Test;
+﻿namespace SpaceBattle.Lib.Test;
 
 using System;
 using System.Collections.Generic;

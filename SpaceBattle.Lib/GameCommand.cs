@@ -12,6 +12,7 @@ public class GameCommand : ICommand
 
     public void Execute()
     {
+        _ = IoC.Resolve<object>("GetScope", gameID);
         IoC.Resolve<object>("Scopes.Current.Set", IoC.Resolve<object>("GetScope", gameID));
         var queue = IoC.Resolve<IReceiver>("GetReceiver", gameID);
         var timeQuant = IoC.Resolve<TimeSpan>("GetTime", gameID);
